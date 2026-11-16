@@ -1,15 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writings & Poems | Hasibul Hossen Shanto</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header / Navbar -->
     <header id="header">
         <div class="container nav-container">
             <a href="index.html" class="logo">Hasibul Hossen Shanto<span>.</span></a>
@@ -25,12 +29,18 @@
                 <a href="contact.html" class="nav-btn">Contact</a>
             </nav>
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
-                <button id="theme-toggle" style="background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-color);"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
-                <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Theme" style="background: none; border: none; cursor: pointer; font-size: 18px; color: var(--text-color);">
+                    <i class="fa-solid fa-sun" id="theme-icon"></i>
+                </button>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Blog Hero Section -->
     <section class="hero" style="padding: 140px 0 60px; text-align: center;">
         <div class="container">
             <span class="tagline-badge">গল্প, কবিতা ও ভাবনা</span>
@@ -39,44 +49,121 @@
         </div>
     </section>
 
+    <!-- Blog Posts Grid Section -->
     <section class="section" style="padding-top: 20px;">
         <div class="container">
             <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 
+                <!-- Story / Poem Card 1 -->
                 <div class="project-card">
-                    <div class="project-header"><i class="fa-solid fa-feather-pointed"></i><span class="status-tag">কবিতা</span></div>
+                    <div class="project-header">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                        <span class="status-tag">কবিতা</span>
+                    </div>
                     <h3>নীরবতার ভাষা</h3>
                     <p style="font-size: 13px; color: var(--text-light); margin-bottom: 10px;"><i class="fa-regular fa-calendar"></i> প্রকাশিত: অক্টোবর ২০২৬</p>
                     <p>জীবনের ব্যস্ততার ভিড়ে যখন চারপাশ বড্ড নিঝুম হয়ে আসে, তখন মনের কোণে জমে থাকা কিছু না বলা কথার কাব্যিক প্রকাশ...</p>
+                    <a href="javascript:void(0)" class="project-link" onclick="openStory('নীরবতার ভাষা', 'প্রকাশিত: অক্টোবর ২০২৬', `জীবনের ব্যস্ততার ভিড়ে যখন চারপাশ বড্ড নিঝুম হয়ে আসে,
+তখন মনের কোণে জমে থাকা কিছু না বলা কথার কাব্যিক প্রকাশ ঘটে।
+
+চারপাশের কোলাহল পেরিয়ে নিজের ভেতরের আওয়াজ শোনার নামই তো জীবন।
+যেখানে কান্নার ভাষা কেউ বোঝে না, সেখানে হয়তো কবিতার পঙক্তিমালা সান্ত্বনা হয়ে ধরা দেয়।`)">সম্পূর্ণ পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
+                <!-- Story / Poem Card 2 -->
                 <div class="project-card">
-                    <div class="project-header"><i class="fa-solid fa-book-open-reader"></i><span class="status-tag upcoming">ছোট গল্প</span></div>
+                    <div class="project-header">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span class="status-tag upcoming">ছোট গল্প</span>
+                    </div>
                     <h3>বিকেলের গোধূলি</h3>
                     <p style="font-size: 13px; color: var(--text-light); margin-bottom: 10px;"><i class="fa-regular fa-calendar"></i> প্রকাশিত: সেপ্টেম্বর ২০২৬</p>
                     <p>নদীর তীরের গ্রামীণ পরিবেশ আর এক টুকরো স্মৃতির রোমন্থন নিয়ে সাজানো একটি ছোট্ট মনস্তাত্ত্বিক গল্প।</p>
+                    <a href="javascript:void(0)" class="project-link" onclick="openStory('বিকেলের গোধূলি', 'প্রকাশিত: সেপ্টেম্বর ২০২৬', `নদীর তীরের গ্রামীণ পরিবেশ আর এক টুকরো স্মৃতির রোমন্থন নিয়ে সাজানো একটি ছোট্ট মনস্তাত্ত্বিক গল্প।
+
+বিকেলের সোনালী আলো যখন নদীর জলে ঠিকরে পড়ত, তখন মনে হতো সময় বুঝি সেখানেই থেমে গেছে। কত না পাওয়ার বেদনা আর পাওয়ার আনন্দ মিশে থাকত সেই গোধূলি লগ্নে।`)">সম্পূর্ণ পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- Read Full Story/Poem Popup Modal -->
+    <div id="read-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; justify-content: center; align-items: center; padding: 20px;">
+        <div style="background: var(--card-bg); color: var(--text-color); padding: 35px 30px; border-radius: 16px; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; border: 1px solid var(--border-color); box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+            <button id="modal-read-close" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 26px; cursor: pointer; color: var(--text-color);">&times;</button>
+            <h2 id="modal-title" style="margin-bottom: 8px; font-size: 24px;"></h2>
+            <p id="modal-date" style="font-size: 13px; color: var(--text-light); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;"></p>
+            <div id="modal-body" style="line-height: 1.8; font-size: 15px; white-space: pre-line;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <div class="container footer-content"><p>&copy; 2026 Hasibul Hossen Shanto. All Rights Reserved.</p></div>
+        <div class="container footer-content">
+            <p>&copy; 2026 Hasibul Hossen Shanto (Hasibul Islam). All Rights Reserved.</p>
+            <p class="footer-tagline">Entrepreneur · Student · Writer</p>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const htmlElement = document.documentElement;
-        if (localStorage.getItem('theme') === 'light') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); }
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'light') {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+
         themeToggleBtn.addEventListener('click', () => {
-            if (htmlElement.getAttribute('data-theme') === 'dark') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'light'); }
-            else { htmlElement.setAttribute('data-theme', 'dark'); themeIcon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'dark'); }
+            let currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
         });
+
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); hamburger.querySelector('i').classList.toggle('fa-bars'); hamburger.querySelector('i').classList.toggle('fa-xmark'); });
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        // Popup Modal Logic
+        const readModal = document.getElementById('read-modal');
+        const modalReadClose = document.getElementById('modal-read-close');
+
+        function openStory(title, date, content) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-date').innerText = date;
+            document.getElementById('modal-body').innerText = content;
+            readModal.style.display = 'flex';
+        }
+
+        modalReadClose.addEventListener('click', () => {
+            readModal.style.display = 'none';
+        });
+
+        readModal.addEventListener('click', (e) => {
+            if (e.target === readModal) {
+                readModal.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
