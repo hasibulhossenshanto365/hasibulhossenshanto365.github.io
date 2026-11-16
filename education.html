@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Hasibul Hossen Shanto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Hasibul Hossen Shanto<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="education.html" class="active">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="ventures.html">Ventures</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">✍️ Writings</a>
+                <a href="contact.html" class="nav-btn">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button id="theme-toggle" style="background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-color);"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
+                <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px; text-align: center;">
+        <div class="container">
+            <span class="tagline-badge">Academics</span>
+            <h1 style="font-size: 38px; margin-bottom: 15px;">শিক্ষাগত যোগ্যতা</h1>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">আমার বর্তমান ও পূর্ববর্তী প্রাতিষ্ঠানিক শিক্ষা।</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header"><i class="fa-solid fa-graduation-cap"></i><span class="status-tag">7th Semester</span></div>
+                    <h3>Diploma in Engineering</h3>
+                    <p><strong>Computer Science and Technology (CST)</strong><br>Bhola Polytechnic Institute</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header"><i class="fa-solid fa-book-open"></i><span class="status-tag upcoming">Running</span></div>
+                    <h3>Bachelor of Arts (BA)</h3>
+                    <p><strong>Islamic History and Culture</strong><br>Bhola Government College</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content"><p>&copy; 2026 Hasibul Hossen Shanto. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+        if (localStorage.getItem('theme') === 'light') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); }
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'light'); }
+            else { htmlElement.setAttribute('data-theme', 'dark'); themeIcon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'dark'); }
+        });
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); hamburger.querySelector('i').classList.toggle('fa-bars'); hamburger.querySelector('i').classList.toggle('fa-xmark'); });
+    </script>
+</body>
+</html>
 
