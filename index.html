@@ -360,14 +360,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Preloader, Theme & Animations -->
+    <!-- JavaScript for Preloader, Theme, Mobile Menu & Animations -->
     <script>
         // Preloader / Splash Screen Logic
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             setTimeout(() => {
                 preloader.classList.add('loaded');
-            }, 1500); // 1.5 seconds delay
+            }, 1500);
         });
 
         // Theme Toggle Logic
@@ -396,6 +396,25 @@
                 themeIcon.classList.replace('fa-moon', 'fa-sun');
                 localStorage.setItem('theme', 'dark');
             }
+        });
+
+        // Mobile Hamburger Menu Toggle Logic
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        // Close menu when clicking a nav link on mobile
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-xmark');
+            });
         });
 
         // Scroll Reveal Animation Logic
