@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Hasibul Hossen Shanto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Hasibul Hossen Shanto<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html" class="active">Experience</a>
+                <a href="ventures.html">Ventures</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">✍️ Writings</a>
+                <a href="contact.html" class="nav-btn">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button id="theme-toggle" style="background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-color);"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
+                <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px; text-align: center;">
+        <div class="container">
+            <span class="tagline-badge">Career</span>
+            <h1 style="font-size: 38px; margin-bottom: 15px;">কাজের অভিজ্ঞতা</h1>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">আমার প্রফেশনাল কর্মজীবন ও বিভিন্ন প্রতিষ্ঠানের অভিজ্ঞতা।</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="project-header"><i class="fa-solid fa-briefcase"></i><span class="status-tag">3 Years</span></div>
+                    <h3>Account Manager</h3>
+                    <p><strong>Khondoker Group</strong></p>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">Managed financial accounts, client relations, and operational workflows.</p>
+                </div>
+                <div class="skill-category">
+                    <div class="project-header"><i class="fa-solid fa-chart-line"></i><span class="status-tag">2 Years</span></div>
+                    <h3>Data Analyst</h3>
+                    <p><strong>Intelligence Image Management</strong></p>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">Handled data processing, accuracy validation, and analytical reporting.</p>
+                </div>
+                <div class="skill-category">
+                    <div class="project-header"><i class="fa-solid fa-file-invoice-dollar"></i><span class="status-tag">2 Years</span></div>
+                    <h3>Audit Officer</h3>
+                    <p><strong>Safe Tech BD</strong></p>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">Conducted internal audits, compliance verification, and reviews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content"><p>&copy; 2026 Hasibul Hossen Shanto. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+        if (localStorage.getItem('theme') === 'light') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); }
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'light'); }
+            else { htmlElement.setAttribute('data-theme', 'dark'); themeIcon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'dark'); }
+        });
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); hamburger.querySelector('i').classList.toggle('fa-bars'); hamburger.querySelector('i').classList.toggle('fa-xmark'); });
+    </script>
+</body>
+</html>
 
