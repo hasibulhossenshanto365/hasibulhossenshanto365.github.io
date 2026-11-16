@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Hasibul Hossen Shanto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Hasibul Hossen Shanto<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="ventures.html">Ventures</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">✍️ Writings</a>
+                <a href="contact.html" class="nav-btn">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button id="theme-toggle" style="background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-color);"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
+                <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px; text-align: center;">
+        <div class="container">
+            <span class="tagline-badge">About Me</span>
+            <h1 style="font-size: 38px; margin-bottom: 15px;">আমার সম্পর্কে</h1>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">প্রযুক্তি, উদ্যোক্তা জীবন এবং আমার লক্ষ্য নিয়ে কিছু কথা।</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+                <div class="hero-image">
+                    <div class="image-box" style="width: 250px; height: 250px; overflow: hidden; border-radius: 50%;">
+                        <img src="profile.jpg" alt="Hasibul Hossen Shanto" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Building a Digital Identity & Future</h3>
+                    <p>I am Hasibul Hossen Shanto (also known as Hasibul Islam). I am passionate about technology, entrepreneurship, and continuous learning. My focus lies in creating meaningful projects, managing entrepreneurial ventures, and expanding my skill set across multiple domains.</p>
+                    <p>Academically, I am studying Computer Science and Technology at Bhola Polytechnic Institute (7th Semester) and pursuing a Bachelor of Arts in Islamic History and Culture at Bhola Government College.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content"><p>&copy; 2026 Hasibul Hossen Shanto. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+        if (localStorage.getItem('theme') === 'light') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); }
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') { htmlElement.setAttribute('data-theme', 'light'); themeIcon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'light'); }
+            else { htmlElement.setAttribute('data-theme', 'dark'); themeIcon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'dark'); }
+        });
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); hamburger.querySelector('i').classList.toggle('fa-bars'); hamburger.querySelector('i').classList.toggle('fa-xmark'); });
+    </script>
+</body>
+</html>
 
