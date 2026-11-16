@@ -14,16 +14,15 @@
 </head>
 <body>
 
-    <!-- Welcome Modal Overlay -->
-    <div id="welcome-modal" class="modal-overlay">
-        <div class="modal-content">
-            <button id="modal-close" class="modal-close-btn">&times;</button>
-            <div class="modal-image-box">
+    <!-- Splash / Preloader Screen -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-img-box">
                 <img src="profile.jpg" alt="Hasibul Hossen Shanto">
             </div>
             <h2>স্বাগতম! / Welcome!</h2>
-            <p>আমার অফিসিয়াল পোর্টফোলিও ওয়েবসাইটে আপনাকে স্বাগতম। আমার প্রোফাইল, স্কিল এবং ভেঞ্চারগুলো ঘুরে দেখার জন্য আমন্ত্রণ রইل।</p>
-            <button id="modal-enter-btn" class="btn btn-primary">Enter Portfolio</button>
+            <p>Hasibul Hossen Shanto - Portfolio</p>
+            <div class="loader-spinner"></div>
         </div>
     </div>
 
@@ -361,8 +360,16 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Theme, Modal & Animations -->
+    <!-- JavaScript for Preloader, Theme & Animations -->
     <script>
+        // Preloader / Splash Screen Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('loaded');
+            }, 1500); // 1.5 seconds delay
+        });
+
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
@@ -388,27 +395,6 @@
                 htmlElement.setAttribute('data-theme', 'dark');
                 themeIcon.classList.replace('fa-moon', 'fa-sun');
                 localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        // Welcome Modal Logic
-        const modal = document.getElementById('welcome-modal');
-        const closeBtn = document.getElementById('modal-close');
-        const enterBtn = document.getElementById('modal-enter-btn');
-
-        function closeModal() {
-            modal.style.opacity = '0';
-            modal.style.transition = 'opacity 0.4s ease';
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 400);
-        }
-
-        closeBtn.addEventListener('click', closeModal);
-        enterBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
             }
         });
 
