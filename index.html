@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,14 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact" class="nav-btn">Contact</a>
             </nav>
-            <div class="hamburger">
-                <i class="fa-solid fa-bars"></i>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Theme" style="background: none; border: none; cursor: pointer; font-size: 18px; color: var(--text-color);">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -183,13 +189,188 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section (Updated Style matching screenshot) -->
     <section id="skills" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>My Skills</h2>
-                <p>A glimpse of my technical and professional capabilities</p>
+                <p>Practical skills, creative thinking, and continuous growth.</p>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fa-
+            <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                
+                <!-- Skill 1 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-bolt" style="font-size: 24px; color: #f59e0b;"></i>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Proficient</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Electrical & Installation</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">Wiring, installation and electrical systems.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-desktop" style="font-size: 24px; color: #3b82f6;"></i>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Proficient</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Computer & MS Office</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">Computer operations and office applications.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-code" style="font-size: 24px; color: #6366f1;"></i>
+                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Intermediate</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Web Development</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">HTML, CSS and basic website development.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-palette" style="font-size: 24px; color: #ec4899;"></i>
+                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Intermediate</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Graphic Design</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">Photoshop, Canva and visual design.</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-cube" style="font-size: 24px; color: #8b5cf6;"></i>
+                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Intermediate</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">CNC & 3D Design</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">CNC concepts and Aspire software.</p>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-bullhorn" style="font-size: 24px; color: #14b8a6;"></i>
+                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Intermediate</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Digital Marketing</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">Facebook marketing and page management.</p>
+                </div>
+
+                <!-- Skill 7 -->
+                <div class="project-card" style="border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; background: var(--card-bg); grid-column: span 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <i class="fa-solid fa-utensils" style="font-size: 24px; color: #f97316;"></i>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">Proficient</span>
+                    </div>
+                    <h3 style="margin-bottom: 8px; font-size: 18px;">Food Processing & Product Development</h3>
+                    <p style="font-size: 14px; color: var(--text-light);">Food production, processing and product development.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p>Showcasing my work and upcoming developments</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="status-tag">Live</span>
+                    </div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>My official personal portfolio website hosted via GitHub Pages, built to showcase my professional identity.</p>
+                    <a href="https://hasibulhossenshanto365.github.io" target="_blank" class="project-link">View Website <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span class="status-tag upcoming">Upcoming</span>
+                    </div>
+                    <h3>Future Ventures & Web Apps</h3>
+                    <p>Upcoming web applications, entrepreneurial projects, and digital solutions currently in the planning phase.</p>
+                    <span class="project-link disabled">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaboration or inquiries</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@hasibulhossenshanto.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bhola, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/hasibulhossenshanto365" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-box">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Hasibul Hossen Shanto (Hasibul Islam). All Rights Reserved.</p>
+            <p class="footer-tagline">Entrepreneur · Student · Technology Enthusiast</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            let currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
