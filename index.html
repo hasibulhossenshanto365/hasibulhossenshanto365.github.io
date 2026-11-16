@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Official personal portfolio of Hasibul Hossen Shanto, also known as Hasibul Islam — student, aspiring entrepreneur and technology enthusiast from Bangladesh.">
+  <meta name="author" content="Hasibul Hossen Shanto">
+  <meta name="keywords" content="Hasibul Hossen Shanto, Hasibul Islam, Bangladesh, entrepreneur, student, technology enthusiast, SUNROSE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hasibul Hossen Shanto | Personal Portfolio">
+  <meta property="og:description" content="Student, aspiring entrepreneur and technology enthusiast from Bangladesh.">
+  <title>Hasibul Hossen Shanto | Personal Portfolio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hasibul Hossen Shanto",
+    "alternateName": "Hasibul Islam",
+    "description": "Student, aspiring entrepreneur and technology enthusiast from Bangladesh.",
+    "nationality": {
+      "@type": "Country",
+      "name": "Bangladesh"
+    },
+    "knowsAbout": [
+      "Entrepreneurship",
+      "Technology",
+      "Electrical and technical skills",
+      "CNC design",
+      "Food branding"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111c2e;
+      --panel2: #16243a;
+      --text: #edf3fb;
+      --muted: #a9b8cc;
+      --accent: #70c6ff;
+      --line: rgba(255,255,255,.12);
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 85% 8%, rgba(63,145,205,.18), transparent 28rem),
+        radial-gradient(circle at 5% 45%, rgba(91,103,202,.12), transparent 25rem),
+        var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,18,32,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: .02em; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 22px; color: var(--muted); font-size: .92rem; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding: 94px 0 76px; display: grid; grid-template-columns: 1.5fr .8fr; gap: 55px; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: .82rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 1.06; letter-spacing: -.055em; margin: 15px 0; }
+    .aka { color: var(--muted); font-size: 1.05rem; }
+    .role { color: #d9e8f8; font-size: clamp(1rem, 2vw, 1.2rem); margin: 18px 0; }
+    .intro { color: var(--muted); max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border-radius: 999px; border: 1px solid var(--line); font-weight: 700; }
+    .btn.primary { background: var(--accent); color: #071321; border-color: var(--accent); }
+    .portrait {
+      min-height: 300px; border: 1px dashed rgba(112,198,255,.55);
+      border-radius: 28px; background: linear-gradient(145deg, rgba(112,198,255,.12), rgba(255,255,255,.025));
+      display: grid; place-items: center; padding: 28px; text-align: center;
+    }
+    .portrait .mark { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 15px; background: var(--panel2); color: var(--accent); font-size: 2rem; font-weight: 800; border: 1px solid var(--line); }
+    .portrait p { color: var(--muted); font-size: .9rem; margin: 0; }
+    section { padding: 55px 0; border-top: 1px solid var(--line); }
+    .section-label { color: var(--accent); font-size: .78rem; text-transform: uppercase; letter-spacing: .15em; font-weight: 800; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.2; margin: 8px 0 22px; }
+    .about { max-width: 790px; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, var(--panel), rgba(17,28,46,.55)); }
+    .card h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .card p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 13px; color: #d8e6f5; background: rgba(255,255,255,.035); font-size: .9rem; }
+    .project { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .project p { max-width: 720px; color: var(--muted); }
+    .note { color: var(--muted); font-size: .86rem; }
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 30px, var(--max)); }
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 10px; }
+      .navlinks { flex-wrap: wrap; gap: 10px 17px; font-size: .85rem; }
+      .hero { grid-template-columns: 1fr; padding: 62px 0 48px; gap: 30px; }
+      .portrait { min-height: 220px; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 42px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">HASIBUL<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Personal portfolio · Bangladesh</div>
+        <h1>Hasibul Hossen Shanto</h1>
+        <div class="aka">Also known as <strong>Hasibul Islam</strong></div>
+        <p class="role">Entrepreneur · Student · Technology Enthusiast</p>
+        <p class="intro">I enjoy learning practical skills, exploring technology, developing creative ideas and building meaningful projects. This is my personal space to share my journey, interests and work.</p>
+        <div class="actions">
+          <a class="btn primary" href="#about">Discover my story</a>
+          <a class="btn" href="#projects">Explore projects</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Profile photo placeholder">
+        <div>
+          <div class="mark">HS</div>
+          <strong>Profile photo</strong>
+          <p>Your photograph can be added here later.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">A little about me</div>
+        <h2>Learning, building, growing.</h2>
+        <p class="about">I am Hasibul Hossen Shanto, also known as Hasibul Islam, from Bangladesh. I am a student and aspiring entrepreneur with an interest in technology and practical, hands-on work. I believe in continuous learning, thoughtful experimentation and turning ideas into useful projects.</p>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="wrap">
+        <div class="section-label">What I explore</div>
+        <h2>Interests & learning</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Entrepreneurship</h3>
+            <p>Learning how to develop ideas, build a brand and grow a small business.</p>
+          </article>
+          <article class="card">
+            <h3>Technology</h3>
+            <p>Exploring digital tools, computers, devices and practical technology.</p>
+          </article>
+          <article class="card">
+            <h3>Creative & technical work</h3>
+            <p>Interested in electrical skills, CNC design and making useful things.</p>
+          </article>
+        </div>
+        <div style="height:20px"></div>
+        <div class="tags">
+          <span class="tag">Business & branding</span>
+          <span class="tag">Digital technology</span>
+          <span class="tag">Electrical skills</span>
+          <span class="tag">CNC design</span>
+          <span class="tag">Creative projects</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">Selected initiative</div>
+        <h2>Projects & entrepreneurship</h2>
+        <article class="card project">
+          <div>
+            <h3>SUNROSE</h3>
+            <p>SUNROSE is a food brand I am working to develop, with a focus on spices and food products. I am interested in product development, packaging, branding and building a trusted identity.</p>
+            <span class="note">Founder-led personal initiative</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Hasibul Hossen Shanto</strong> · Also known as Hasibul Islam
+      <div class="note">Personal portfolio · Bangladesh</div>
+      <div class="note">© <span id="year"></span> Hasibul Hossen Shanto. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
