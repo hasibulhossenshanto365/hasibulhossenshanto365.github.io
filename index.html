@@ -14,6 +14,19 @@
 </head>
 <body>
 
+    <!-- Welcome Modal Overlay -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div class="modal-image-box">
+                <img src="profile.jpg" alt="Hasibul Hossen Shanto">
+            </div>
+            <h2>স্বাগতম! / Welcome!</h2>
+            <p>আমার অফিসিয়াল পোর্টফোলিও ওয়েবসাইটে আপনাকে স্বাগতম। আমার প্রোফাইল, স্কিল এবং ভেঞ্চারগুলো ঘুরে দেখার জন্য আমন্ত্রণ রইل।</p>
+            <button id="modal-enter-btn" class="btn btn-primary">Enter Portfolio</button>
+        </div>
+    </div>
+
     <!-- Header / Navbar -->
     <header id="header">
         <div class="container nav-container">
@@ -41,7 +54,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero reveal">
         <div class="container hero-container">
             <div class="hero-content">
                 <span class="tagline-badge">Entrepreneur · Student · Technology Enthusiast</span>
@@ -61,7 +74,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
@@ -95,7 +108,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="section bg-light">
+    <section id="education" class="section bg-light reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Education</h2>
@@ -123,7 +136,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section">
+    <section id="experience" class="section reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Experience</h2>
@@ -162,7 +175,7 @@
     </section>
 
     <!-- Ventures & Businesses Section -->
-    <section id="ventures" class="section bg-light">
+    <section id="ventures" class="section bg-light reveal">
         <div class="container">
             <div class="section-title">
                 <h2>My Ventures & Businesses</h2>
@@ -190,7 +203,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="section reveal">
         <div class="container">
             <div class="section-title">
                 <h2>My Skills</h2>
@@ -266,7 +279,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
+    <section id="projects" class="section bg-light reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Projects</h2>
@@ -296,7 +309,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
@@ -348,13 +361,13 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Theme Toggle -->
+    <!-- JavaScript for Theme, Modal & Animations -->
     <script>
+        // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const htmlElement = document.documentElement;
 
-        // Check saved theme
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             htmlElement.setAttribute('data-theme', savedTheme);
@@ -377,6 +390,44 @@
                 localStorage.setItem('theme', 'dark');
             }
         });
+
+        // Welcome Modal Logic
+        const modal = document.getElementById('welcome-modal');
+        const closeBtn = document.getElementById('modal-close');
+        const enterBtn = document.getElementById('modal-enter-btn');
+
+        function closeModal() {
+            modal.style.opacity = '0';
+            modal.style.transition = 'opacity 0.4s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 400);
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        enterBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Scroll Reveal Animation Logic
+        window.addEventListener('scroll', revealSections);
+
+        function revealSections() {
+            const sections = document.querySelectorAll('.reveal');
+            const triggerBottom = window.innerHeight * 0.85;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', revealSections);
     </script>
 </body>
 </html>
